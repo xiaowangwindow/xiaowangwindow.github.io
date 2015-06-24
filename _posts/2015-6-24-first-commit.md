@@ -1,12 +1,10 @@
 ---
 layout: post
-title: Post with a Background Image
+title: First Commit
 description: "Sample post with a background image CSS override."
-tags: [sample post]
+tags: [me]
 image:
   background: triangular.png
 ---
 
-##First Commit
 i am rejected when first commit.
-一开始我是拒绝的。
