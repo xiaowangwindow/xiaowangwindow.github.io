@@ -1,8 +1,9 @@
 ---
 layout: post
-title: Sites
-description: "常用站点收集"
-tags: [me]
+title: Storyboard reuse crash  
+description: "在 `Storyboard` 模式下，执行`dequeueReusableCellWithIdentifier:forIndexPath` 出现Crash, Log显示 `
+  2013-08-12-sample-link-post.m|    NSScanner nil string argument`，`libc++abi.dylib: terminate_handler unexpectedly threw an exception`"
+tags: [iOS]
 image:
   background: triangular.png
 ---
