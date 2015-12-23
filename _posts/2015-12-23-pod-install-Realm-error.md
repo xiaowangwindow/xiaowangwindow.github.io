@@ -16,14 +16,23 @@ image:
 
 ```
 Updating local specs repositories
+
 Analyzing dependencies
+
 Downloading dependencies
+
 Installing Realm (0.96.2)
+
 [!] /bin/bash -c 
+
 set -e
+
 sh build.sh cocoapods-setup
+
 core is not a symlink. Deleting...
+
 Downloading dependency: core 0.94.0
+
 Downloading core failed. Please try again once you have an Internet connection.
 
 ```
