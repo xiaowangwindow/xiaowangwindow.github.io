@@ -1,5 +1,14 @@
+---
+layout: post
+title: AFNetworking3.0 详解
+description: "iOS技术"
+tags: [me]
+image:
+  background: triangular.png
+---
+
 ## AFNetworking3.0详解
-在AF中，大量用到了`GCD`和`NSURLSession`的代理方法，所以在介绍AF之前，有必要简单介绍一下GDC(grand central dispatch) 和NSURLSession.
+在AF中，大量用到了`GCD`和`NSURLSession`的代理方法，所以在介绍AF之前，有必要简单介绍一下GCD(grand central dispatch) 和NSURLSession.
 
 #### 1.GCD
 
@@ -26,7 +35,7 @@ GCD中有几个重要概念。
 	一个请求再被发送到服务器之前，会先查询缓存信息，根据策略(policy)以及可用性(availability)的不同来进行处理。
 	在发送给服务器后，服务器可能会发出鉴权查询(authentication challenge)，可以由cookie和机密存储(credential storage)自动响应，也可以被委托对象响应
 - NSURLSession
-		与NSURLConnection的区别，是把URLConnection换成了URLSession，包括`NSURLSession`, `NSURLSessionConfiguration`,  `NSURLSessionTask`(`NSURLSessionDataTask`, `NSURLSessionUploadTask`, `NSURLSessionDownloadTask`)(NSURLSessionTask是一个抽象类，它下面的三个子类才是真正可以使用的类，其中dataTask继承于DataTask)
+		与NSURLConnection的区别，是把URLConnection换成了URLSession，包括`NSURLSession`, `NSURLSessionConfiguration`,  `NSURLSessionTask`(`NSURLSessionDataTask`, `NSURLSessionUploadTask`, `NSURLSessionDownloadTask`)(NSURLSessionTask是一个抽象类，它下面的三个子类才是真正可以使用的类，其中UploadTask继承于DataTask)
 		与NSURLConnection相比，URLSession最直接的改进就是可以配置每个session的缓存，协议，cookie以及证书策略，甚至跨应用共享这些数据。
 		`SessionTask`负责数据的加载，所有task共享其创造者`NSURLSession`这一公共委托。
 
@@ -115,7 +124,7 @@ resume和suspend状态是NSURLSession自行控制切换的。
 
 UIImageView+AFNetworking
 3.0.4使用的是NSMutableDictionary, 自身管理缓存淘汰，淘汰最长时间没有使用的image
-之前的采用的是NSCache，NSCache只支持memory缓存，不知道disk缓存。
+之前的采用的是NSCache，NSCache只支持memory缓存，不支持disk缓存。
 
 对于具体的Task，只要保留了该指针，皆可通过它进行取消、暂停、恢复等操作。
 
