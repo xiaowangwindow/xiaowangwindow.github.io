@@ -1,11 +1,11 @@
 ## AFNetworking3.0详解
-在AF中，大量用到了`GDC`和`NSURLSession`的代理方法，所以在介绍AF之前，有必要简单介绍一下GDC(grand dispatch center) 和NSURLSession.
+在AF中，大量用到了`GCD`和`NSURLSession`的代理方法，所以在介绍AF之前，有必要简单介绍一下GDC(grand central dispatch) 和NSURLSession.
 
-#### 1.GDC
+#### 1.GCD
 
-GDC是苹果在C层面上实现的一种消息配发机制，极大地方便开发者处理多线程和线程中的消息传递。在此之上，苹果封装了NSOperation和NSOperationQueue,其功能更为强大，但是仍然是基于GDC的。
+GCD是苹果在C层面上实现的一种消息配发机制，极大地方便开发者处理多线程和线程中的消息传递。在此之上，苹果封装了NSOperation和NSOperationQueue,其功能更为强大，但是仍然是基于GDC的。
 
-GDC中有几个重要概念。
+GCD中有几个重要概念。
 `dispatch_async` 异步派发
 `dispatch_sync` 同步派发
 `dispatch_get_main_queue` 主队列
