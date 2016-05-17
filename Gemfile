@@ -1,6 +1,4 @@
-source 'https://ruby.taobao.org'
+source "https://rubygems.org"
+gem "rake"
 
-gem 'jekyll'
-gem 'sass'
-gem 'octopress', '~> 3.0.0.rc.12'
-gem 'jekyll-sitemap'
+gem "jekyll"
