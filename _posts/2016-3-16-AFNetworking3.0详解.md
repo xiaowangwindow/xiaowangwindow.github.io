@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_layout
 title: AFNetworking3.0 详解
 description: "iOS技术"
 tags: [me]
